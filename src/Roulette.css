@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Verifont';
+  src:
+    local('Verifont'),
+    local('Verifont'),
+    url(./font/veri.otf) format('opentype');
+}
+body {
+  font-family: 'Verifont'
+}
+.roulette {
+  font-family: 'Verifont';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(249, 234, 198);
+  height: 76rem;
+  width: 100%;
+}
+.roulette-container {
+  font-family: 'Verifont';
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+} 
+.background {
+  font-family: 'Verifont';
+  
+}
+h1 {
+  color: #CE614A;
+  align-self: center;
+  width: 40%;
+  text-align: center;
+}
+  

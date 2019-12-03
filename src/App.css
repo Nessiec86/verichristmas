@@ -1,0 +1,96 @@
+
+.App {
+  text-align: center;
+  display: flex;
+  background-color: #ac451d;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Verifont';
+}
+
+.backgr {
+  background-image: url('../src/img/fond-home1280.jpg');
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 20%;
+  pointer-events: none;
+}
+
+.App-header {
+  display: flex;
+  background-color:#ac451d;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  width: 100%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: bold;
+  font-size: 20px;
+}
+.welcome {
+  font-size: 20px;
+  text-align: center; 
+}
+.instructions {
+  text-align: center; 
+  color: '#333333';
+}
+.tabIcon {
+  width: 16;
+  height: 16;
+}
+.r-clock {
+  display: flex;
+  justify-content: center;
+}
+.clock-sign {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav {
+  background-color: #ac451d;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.val {
+  margin: 0 0 15rem 0;
+}
+.work {
+  margin:-10rem 0 5rem 0;
+  padding: 0 auto;
+}
+time {
+  margin: 10% 0;
+}
+
