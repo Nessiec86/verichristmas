@@ -14,18 +14,16 @@ body {
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(249, 234, 198);
-  height: 165rem;
+  height: 120rem;
   width: 100%;
 }
 .roulette-container {
   font-family: 'Verifont';
   display: flex;
   justify-content: center;
-  padding: 5px;
 } 
 .background {
   font-family: 'Verifont';
-  
 }
 h1 {
   color: #CE614A;

@@ -73,7 +73,7 @@ class Canvas extends Component {
         '#DDE8BC',
         '#DDE8BC',
       ],
-      baseSize: 600,
+      baseSize: 500,
       spinAngleStart: Math.random() * 10 + 10,
       spinTimeTotal: Math.random() * 3 + 4 * 1000,
     };
@@ -126,7 +126,7 @@ class Canvas extends Component {
         ctx.clearRect(0,0,800,800);
 
         // Textos
-        ctx.font = '30px Verifont';
+        ctx.font = '26px Verifont';
         ctx.strokeStyle = 'black';
         ctx.lineWidth = 2;
        
@@ -145,8 +145,8 @@ class Canvas extends Component {
           //ctx.fillStyle = 'white';
           ctx.fillStyle = text_colors[i];
           
-          ctx.translate(baseSize + Math.cos(angle + arc / 2) * /*textRadius*/ 300, 
-                        baseSize + Math.sin(angle + arc / 2) * /*textRadius*/ 320);
+          ctx.translate(baseSize + Math.cos(angle + arc / 2) * /*textRadius*/ 240, 
+                        baseSize + Math.sin(angle + arc / 2.5) * /*textRadius*/ 240);
           //ctx.rotate(angle + arc / 2 + Math.PI / 2);
           ctx.rotate(angle + arc / 22.5 + Math.PI / 22.5);
           const text = options[i];
@@ -172,7 +172,7 @@ class Canvas extends Component {
       //CLEAR RESULT
       const canvas = this.refs.canvas;
       const ctx = canvas.getContext('2d');
-      ctx.clearRect(0,1200,1200,200);
+      ctx.clearRect(0,1000,1200,200);
 
       //SPIN FUNCTION
       this.spinTimer = null;
@@ -218,12 +218,12 @@ class Canvas extends Component {
       const index = Math.floor((360 - degrees % 360) / arcd);
       ctx.save();
       
-      ctx.font = 'bold 60px Verifont';
+      ctx.font = 'bold 50px Verifont';
       const text = options[index]
       console.log(text)
 
       // ctx.drawImage(img,0,0,100,100);
-      ctx.fillText(text, baseSize - ctx.measureText(text).width / 2, 1300);
+      ctx.fillText(text, baseSize - ctx.measureText(text).width / 2, 1100);
 
       ctx.restore();
      
@@ -263,9 +263,9 @@ class Canvas extends Component {
         <div className='background'>
           <Nav/>
             <div className="roulette">
-              <h1 style={{fontSize: '5rem', margin: '5rem 0'}}>LOS VERIJUEGOS DEL HAMBRE</h1> 
+              <h1 style={{fontSize: '5rem', margin: '6rem 0 0 0'}}>LOS VERIJUEGOS DEL HAMBRE</h1> 
               <div className="roulette-container">
-                <canvas ref="canvas" width={baseSize * 2} height={baseSize * 3} className="roulette-canvas"></canvas>
+                <canvas ref="canvas" width={baseSize * 2} height={baseSize * 2.5} className="roulette-canvas"></canvas>
             </div>
             <div className="roulette-container">
               <Button 
@@ -275,9 +275,9 @@ class Canvas extends Component {
                 className="button"  
                 style={{
                   fontFamily:'Verifont',
-                  fontSize:'60px',
+                  fontSize:'50px',
                   margin: '5rem 0',
-                  padding: '70px 40px 70px 40px',
+                  padding: '50px 25px 50px 25px',
                   borderRadius: '120px',
                 }} 
                 id="spin">
