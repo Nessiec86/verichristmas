@@ -74,7 +74,7 @@ class Canvas extends Component {
         '#DDE8BC',
         '#DDE8BC',
       ],
-      baseSize: 500,
+      baseSize: 400,
       spinAngleStart: Math.random() * 10 + 10,
       spinTimeTotal: Math.random() * 3 + 4 * 1000,
     };
@@ -127,7 +127,7 @@ class Canvas extends Component {
         ctx.clearRect(0,0,800,800);
 
         // Textos
-        ctx.font = '30px Verifont';
+        ctx.font = '24px Verifont';
         ctx.strokeStyle = 'black';
         ctx.lineWidth = 2;
        
@@ -146,8 +146,8 @@ class Canvas extends Component {
           //ctx.fillStyle = 'white';
           ctx.fillStyle = text_colors[i];
           
-          ctx.translate(baseSize + Math.cos(angle + arc / 2) * /*textRadius*/ 260, 
-                        baseSize + Math.sin(angle + arc / 2) * /*textRadius*/ 260);
+          ctx.translate(baseSize + Math.cos(angle + arc / 2) * /*textRadius*/ 210, 
+                        baseSize + Math.sin(angle + arc / 2) * /*textRadius*/ 200);
           //ctx.rotate(angle + arc / 2 + Math.PI / 2);
           ctx.rotate(angle + arc / 22.5 + Math.PI / 22.5);
           const text = options[i];
@@ -161,10 +161,10 @@ class Canvas extends Component {
         //ctx.lineTo(baseSize + 10, baseSize - (outsideRadius + 20));
         //ctx.lineTo(baseSize + 0, baseSize - (outsideRadius - 5));
         //ctx.lineTo(baseSize - 10, baseSize - (outsideRadius + 20));
-        ctx.lineTo(baseSize + 10, baseSize - (540 + 20));
-        ctx.lineTo(baseSize + 0, baseSize - (540 - 5));
-        ctx.lineTo(baseSize - 10, baseSize - (540 + 20));
-        ctx.fill();
+        ctx.lineTo(baseSize + 30, baseSize - (540 - 150));
+        ctx.lineTo(baseSize + 0, baseSize - (550 - 210));
+        ctx.lineTo(baseSize - 30, baseSize - (540 - 150));
+        ctx.fill()
         ctx.stroke();
       }
     }
@@ -173,7 +173,7 @@ class Canvas extends Component {
       //CLEAR RESULT
       const canvas = this.refs.canvas;
       const ctx = canvas.getContext('2d');
-      ctx.clearRect(0,1000,1200,200);
+      ctx.clearRect(0,800,1200,200);
 
       //SPIN FUNCTION
       this.spinTimer = null;
@@ -224,7 +224,7 @@ class Canvas extends Component {
       console.log(text)
 
       // ctx.drawImage(img,0,0,100,100);
-      ctx.fillText(text, baseSize - ctx.measureText(text).width / 2, 1100);
+      ctx.fillText(text, baseSize - ctx.measureText(text).width / 2, 820);
 
       ctx.restore();
      
@@ -262,12 +262,12 @@ class Canvas extends Component {
         
       return (
         <div className='background'>
-          <Nav/>
+          {/* <Nav/> */}
             <div className="roulette">
-              <img src={logojuegos} alt="veri" style={{width: '45%', margin: ' 0 auto', padding: '0 0 5rem 0'}}></img>
+              <img src={logojuegos} alt="veri" style={{width: '20%', margin: ' 0 auto', padding: '0 0 5rem 0'}}></img>
               {/* <h1 style={{fontSize: '5rem', margin: '6rem 0 0 0'}}>LOS VERIJUEGOS DEL HAMBRE</h1>  */}
               <div className="roulette-container">
-                <canvas ref="canvas" width={baseSize * 2} height={baseSize * 2.5} className="roulette-canvas"></canvas>
+                <canvas ref="canvas" width={baseSize * 2} height={baseSize * 2.2} className="roulette-canvas"></canvas>
             </div>
             <div className="roulette-container">
               <Button 
@@ -278,8 +278,8 @@ class Canvas extends Component {
                 style={{
                   fontFamily:'Verifont',
                   fontSize:'50px',
-                  margin: '5rem 0',
-                  padding: '50px 25px 50px 25px',
+                  margin: '0 0 5rem 0',
+                  padding: '2.5rem 1rem',
                   borderRadius: '120px',
                 }} 
                 id="spin">

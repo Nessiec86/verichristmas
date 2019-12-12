@@ -18,8 +18,8 @@ body {
   
   height: 100%;
   width: 100%;
-  background-color: red; /* For browsers that do not support gradients */
-  background-image: radial-gradient(circle,red,orange,black,black, black, black); /* Standard syntax (must be last) */
+  background-color: black; /*For browsers that do not support gradients*/
+  background-image: radial-gradient(circle,red,white, black,black, black, black); /*Standard syntax (must be last)*/
 
   /* height: 120rem;
   width: 100%; */
