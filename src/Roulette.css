@@ -13,9 +13,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: rgb(249, 234, 198);
-  height: 120rem;
+  /* background-color: rgb(249, 234, 198); */
+  /* background-color: black; */
+  
+  height: 100%;
   width: 100%;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(circle,red,orange,black,black, black, black); /* Standard syntax (must be last) */
+
+  /* height: 120rem;
+  width: 100%; */
 }
 .roulette-container {
   font-family: 'Verifont';

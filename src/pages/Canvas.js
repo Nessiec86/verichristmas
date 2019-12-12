@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';    
 import { Button } from 'react-bootstrap';
 import Nav from '../Components/Nav';
+import logojuegos from '../img/logojuegos.jpeg';
 
 class Canvas extends Component {
     constructor(props) {
@@ -32,17 +33,17 @@ class Canvas extends Component {
   
     static defaultProps = {
       options:  [
-        'PIERDES 1 PUNTO',
-        '¿SABES MÁS QUE UN NIÑO DE PRIMARIA?',
-        'IDENTIFICA LA FOTO!',
-        '¿ECO O NO ECO?',
-        'ECO FIT!',
+        'PIERDES 1 PUNTOS',
+        '¿S M Q U N D P?',
+        '¿CONOCES A TUS COMPAÑEROS?',
+        '¿QUIÉN ES QUIÉN?',
+        'AL PIE DE LA LETRA',
         'PIERDES 1 PUNTO',
         'AL PIE DE LA LETRA',
-        'CONOCES A TU COMPAÑERO',
+        '¿CONOCES A TUS COMPAÑEROS?',
         'PIERDES TU TURNO',
-        'ECO FIT!', /*COMIENZO*/ 
-        '¿SABES MÁS QUE UN NIÑO DE PRIMARIA?',
+        '¿S M Q U N D P?', /*COMIENZO*/ 
+        '¿QUIÉN ES QUIÉN?',
         'PIERDES TU TURNO',
         ],
       colors: [
@@ -126,7 +127,7 @@ class Canvas extends Component {
         ctx.clearRect(0,0,800,800);
 
         // Textos
-        ctx.font = '26px Verifont';
+        ctx.font = '30px Verifont';
         ctx.strokeStyle = 'black';
         ctx.lineWidth = 2;
        
@@ -145,8 +146,8 @@ class Canvas extends Component {
           //ctx.fillStyle = 'white';
           ctx.fillStyle = text_colors[i];
           
-          ctx.translate(baseSize + Math.cos(angle + arc / 2) * /*textRadius*/ 240, 
-                        baseSize + Math.sin(angle + arc / 2.5) * /*textRadius*/ 240);
+          ctx.translate(baseSize + Math.cos(angle + arc / 2) * /*textRadius*/ 260, 
+                        baseSize + Math.sin(angle + arc / 2) * /*textRadius*/ 260);
           //ctx.rotate(angle + arc / 2 + Math.PI / 2);
           ctx.rotate(angle + arc / 22.5 + Math.PI / 22.5);
           const text = options[i];
@@ -263,7 +264,8 @@ class Canvas extends Component {
         <div className='background'>
           <Nav/>
             <div className="roulette">
-              <h1 style={{fontSize: '5rem', margin: '6rem 0 0 0'}}>LOS VERIJUEGOS DEL HAMBRE</h1> 
+              <img src={logojuegos} alt="veri" style={{width: '45%', margin: ' 0 auto', padding: '0 0 5rem 0'}}></img>
+              {/* <h1 style={{fontSize: '5rem', margin: '6rem 0 0 0'}}>LOS VERIJUEGOS DEL HAMBRE</h1>  */}
               <div className="roulette-container">
                 <canvas ref="canvas" width={baseSize * 2} height={baseSize * 2.5} className="roulette-canvas"></canvas>
             </div>
