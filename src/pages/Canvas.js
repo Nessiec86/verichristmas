@@ -34,15 +34,15 @@ class Canvas extends Component {
     static defaultProps = {
       options:  [
         'PIERDES 1 PUNTOS',
+        '¿QUIÉN ES QUIÉN?',
         '¿S M Q U N D P?',
-        '¿CONOCES A TUS COMPAÑEROS?',
         '¿QUIÉN ES QUIÉN?',
         'AL PIE DE LA LETRA',
         'PIERDES 1 PUNTO',
         'AL PIE DE LA LETRA',
         '¿CONOCES A TUS COMPAÑEROS?',
         'PIERDES TU TURNO',
-        '¿S M Q U N D P?', /*COMIENZO*/ 
+        '¿CONOCES VERITAS?', /*COMIENZO*/ 
         '¿QUIÉN ES QUIÉN?',
         'PIERDES TU TURNO',
         ],
@@ -264,7 +264,7 @@ class Canvas extends Component {
         <div className='background'>
           {/* <Nav/> */}
             <div className="roulette">
-              <img src={logojuegos} alt="veri" style={{width: '20%', margin: ' 0 auto', padding: '0 0 5rem 0'}}></img>
+              <img src={logojuegos} alt="veri" style={{width: '20%', heigth:'20rem', alignSelf: 'center'}}></img>
               {/* <h1 style={{fontSize: '5rem', margin: '6rem 0 0 0'}}>LOS VERIJUEGOS DEL HAMBRE</h1>  */}
               <div className="roulette-container">
                 <canvas ref="canvas" width={baseSize * 2} height={baseSize * 2.2} className="roulette-canvas"></canvas>
@@ -278,7 +278,7 @@ class Canvas extends Component {
                 style={{
                   fontFamily:'Verifont',
                   fontSize:'50px',
-                  margin: '0 0 5rem 0',
+                  alignSelf: 'center',
                   padding: '2.5rem 1rem',
                   borderRadius: '120px',
                 }} 

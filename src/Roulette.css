@@ -11,7 +11,7 @@ body {
 .roulette {
   font-family: 'Verifont';
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   /* background-color: rgb(249, 234, 198); */
   /* background-color: black; */
@@ -19,8 +19,8 @@ body {
   height: 100%;
   width: 100%;
   background-color: black; /*For browsers that do not support gradients*/
-  background-image: radial-gradient(circle,red,white, black,black, black, black); /*Standard syntax (must be last)*/
-
+  /* background-image: radial-gradient(circle,red,white, black,black, black, black); /*Standard syntax (must be last)*/
+  background-image: linear-gradient(black, black, black, white);
   /* height: 120rem;
   width: 100%; */
 }
@@ -28,6 +28,7 @@ body {
   font-family: 'Verifont';
   display: flex;
   justify-content: center;
+  align-self: center;
 } 
 .background {
   font-family: 'Verifont';
